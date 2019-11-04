@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task Manager</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper header-wrapper">
+            <a href="/">
+                <h2 class="header-title">Task Manager</h2>
+            </a>
+            <% if(user.id && user.login) { %>
+            <h4>Вітаємо, <%=user.login %></h4>
+            <a href="/api/auth/logout">
+                <h4>Вихід</h4>
+            </a>
+            <% } else { %>
+            <h4></h4>
+            <% } %>
+        </div>
+    </header>
+</body>
+
+</html>

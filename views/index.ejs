@@ -1,0 +1,48 @@
+<% include layout/header.ejs %>
+<div class="container">
+    <section class="main">
+        <div class="wrapper main-wrapper">
+            <div class="task-content">
+                <% tasks.forEach(function(task) { %>
+                <div class="task-container">
+                    <h3>
+                        <a href="/tasks/<%=task.url %>">
+                            <%=task.title %>
+                        </a>
+                        <% task.owner.forEach(function(item) { %>
+                        <% if(item.login == user.login) { %>
+                        <a href="/task/edit/<%=task.id %>"
+                            style="color: black; text-decoration: none; font-size: 25px;"> ✎</a>
+                        <% } %>
+                        <% }); %>
+                    </h3>
+
+                    <div class="task-body">
+                        <%=task.body %>
+                    </div>
+
+                    <p class="task-owner"><b>Автор: </b><%=task.owner[0].login %></p>
+
+                    <% task.owner.forEach(function(item) { %>
+                    <% if(item.login === user.login) { %>
+                    <div class="task-members">
+                        <b>Учасники:</b>
+                        <ul>
+                            <% task.owner.forEach(function(item) { %>
+                            <li>
+                                <%=item.login %>
+                            </li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                    <% } %>
+                    <% }); %>
+                </div>
+                <% }); %>
+            </div>
+            <% include layout/sidebar.ejs %>
+        </div>
+    </section>
+
+    <% include layout/footer.ejs %>
+</div>

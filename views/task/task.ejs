@@ -1,0 +1,37 @@
+<% include ../layout/header.ejs %>
+<div class="main">
+    <div class="wrapper">
+        <div class="content task-container">
+            <h2><%=task.title %></h2>
+            <p><%=task.body %></p>
+
+            <!-- loop -->
+            <% task.owner.forEach(function(item) { %>
+
+            <input type="hidden" id="delete-task" value="<%=task.id %>">
+            <% if(item.login == user.login) { %>
+            <button class="delete-button">Видалити</button>
+            <% } %>
+            <% }); %>
+            
+            <div class="share-block">
+                <label for="shareTask">Приєднатись до завдання</label>
+                <input type="hidden" id="task-share" value="<%=task.id %>">
+                <input type="hidden" id="user-share" value="<%=user.id %>">
+                <a class="deleteTask shareTask" style="color: black; text-decoration: none;">&#10150;</a>
+            </div>
+
+            <!-- loop -->
+            <% task.owner.forEach(function(item) { %>
+            <% if(item.login == user.login && user.id && user.login) { %>
+            <div class="share-block-true share-block">
+                <label for="shareTask"><b><%=user.login %>, </b>Ви приєднались до завдання!</label>
+            </div>
+            <% } %>
+            <% }); %>
+
+        </div>
+        <% include ../layout/sidebar.ejs %>
+    </div>
+</div>
+<% include ../layout/footer.ejs %>

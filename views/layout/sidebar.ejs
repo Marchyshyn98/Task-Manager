@@ -1,0 +1,43 @@
+<div class="sidebar">
+    <div class="auth auth-container">
+        <% if(!user.id && !user.login) { %>
+        <form method="post" class="login">
+            <h2>Вхід</h2>
+            <div class="form-group">
+                <label for="login">Логін</label>
+                <input type="text" id="login-login" name="login" />
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="login-password" name="password" />
+            </div>
+            <div class="buttons">
+                <button class="switch-button">Реєстрація</button>
+                <button class="login-button">Увійти</button>
+            </div>
+        </form>
+        <form method="post" class="register">
+            <h2>Реєстрація</h2>
+            <div class="form-group">
+                <label for="register-login">Логін</label>
+                <input type="text" id="register-login" name="login" />
+            </div>
+            <div class="form-group">
+                <label for="register-password">Пароль</label>
+                <input type="password" id="register-password" name="password" />
+            </div>
+            <div class="form-group form-group-confirm">
+                <label for="register-password" class="label-confirm">Підтвердження пароля</label>
+                <input type="password" id="register-password-confirm" name="passwordConfirm" />
+            </div>
+            <div class="buttons">
+                <button class="switch-button">Вхід</button>
+                <button class="register-button">Реєстрація</button>
+            </div>
+        </form>
+        <% } else { %>
+        <p>Тепер ви можете працювати з TaskManager!</p>
+        <a href="/task/add">Додати таск</a>
+        <% } %>
+    </div>
+</div>

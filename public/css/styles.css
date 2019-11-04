@@ -1,0 +1,271 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input,
+textarea,
+button {
+  padding-left: 10px;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+.deleteTask {
+  float: right;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.share-block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.share-block label {
+  font-style: italic;
+}
+
+.shareTask {
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+.delete-button {
+  border-color: red;
+  color: red;
+  margin: 30px 0 0 0;
+  width: 200px;
+}
+
+/* error, success */
+.error {
+  border-color: red;
+  color: red;
+  text-align: center;
+}
+
+.success {
+  border-color: green;
+  color: green;
+  text-align: center;
+}
+
+/* header */
+header {
+  background: #d3d3d3;
+  height: 80px;
+}
+
+.header-menu {
+  display: flex;
+}
+
+.header-menu li {
+  margin-right: 50px;
+}
+
+.wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.main-wrapper {
+  padding-top: 20px;
+}
+
+/* Main */
+
+.main {
+  padding: 50px 0 100px 0;
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.task-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  width: 50%;
+}
+
+.task-container h3 {
+  margin: 0;
+}
+
+.task-container .task-body,
+p {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.task-body {
+  margin: 15px 0 15px 0;
+}
+
+.task-owner, .task-members {
+  display: flex;
+  justify-content: flex-end;
+}
+
+b {
+  margin-right: 5px;
+  font-weight: 500;
+}
+
+.task-members {
+  flex-direction: column;
+}
+
+.task-members ul {
+  margin-top: 5px;
+}
+
+form h2 {
+  text-align: center;
+}
+
+.sidebar {
+  align-self: flex-start;
+}
+
+.auth {
+  border: 1px solid #d3d3d3;
+  padding: 20px;
+  background: #d3d3d3;
+  border-radius: 3px;
+  padding: 0 20px 20px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.form-group-confirm {
+  flex-direction: column;
+}
+
+.form-group-confirm .label-confirm {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  height: 20px;
+  border: 1px solid;
+}
+
+.form-group label {
+  width: 70px;
+  align-self: center;
+}
+
+form .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button,
+.publish-button {
+  cursor: pointer;
+  background: #fff;
+  padding: 5px;
+  border: 1px solid blue;
+  color: blue;
+}
+
+.buttons .switch-button {
+  border: 1px solid orange;
+  color: orange;
+}
+
+.register {
+  display: none;
+}
+
+/* add task */
+
+.add-task-container {
+  width: 50%;
+}
+
+.task-form {
+  width: 80%;
+}
+
+.task-form .form-group {
+  flex-direction: column;
+}
+
+.task-form label {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.task-form input {
+  height: 30px;
+}
+
+.task-form textarea {
+  height: 200px;
+}
+
+.publish-button {
+  float: right;
+}
+
+.container {
+  position: relative;
+  min-height: 100%;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background: #d3d3d3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
