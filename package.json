@@ -28,7 +28,7 @@
     "express-session": "^1.16.2",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mongoose": "^5.7.7",
     "mongoose-autopopulate": "^0.9.1",
     "mongoose-url-slugs": "^1.0.2",
